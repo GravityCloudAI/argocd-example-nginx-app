@@ -32,7 +32,11 @@ nginxer                nginx-gateway-deployment-55cc7cd658-rsmmw           1/1  
 > ArgoCD UI
 
 Applications Page
+
 ![argocd-applications](https://res.cloudinary.com/dor5uewzz/image/upload/v1720765484/readme-assets/argocd-applications_sn5rx1.png)
 
 Application Details
+
 ![argocd-application-details](https://res.cloudinary.com/dor5uewzz/image/upload/v1720765484/readme-assets/argocd-app-details_qbppwz.png)
+
+5. To make changes to the deployment or replicas via Sync. Clone the repo and make changes to the `Values.yaml` file
