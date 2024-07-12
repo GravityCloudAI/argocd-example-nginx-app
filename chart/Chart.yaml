@@ -1,4 +1,4 @@
 apiVersion: v2
-name: nginx-app
-description: A Helm chart for Kubernetes to deploy nginx-app service
+name: nginx-gateway
+description: A Helm chart for Kubernetes to deploy nginx-gateway service
 version: 0.1.0
