@@ -5,8 +5,8 @@
 1. Install & Setup ArgoCD: [Deploying Argo CD in Kubernetes with Helm Chart](https://gravitycloud.ai/blog/deploying-argo-cd-in-kubernetes-with-helm-chart)
 
 2. Download the `argo-nginx-app.yaml`. If you want to change the container image, then clone the repo and make the changes in the yaml file also.
-```
-  source:
+```yaml
+source:
     repoURL: 'https://github.com/code-crusher/test-nginx'
     targetRevision: HEAD
     path: './chart'
@@ -31,4 +31,8 @@ nginxer                nginx-gateway-deployment-55cc7cd658-rsmmw           1/1  
 
 > ArgoCD UI
 
+Applications Page
+![argocd-applications](https://res.cloudinary.com/dor5uewzz/image/upload/v1720765484/readme-assets/argocd-applications_sn5rx1.png)
 
+Application Details
+![argocd-application-details](https://res.cloudinary.com/dor5uewzz/image/upload/v1720765484/readme-assets/argocd-app-details_qbppwz.png)
