@@ -1,4 +1,4 @@
-name: gravity-console-backend
+name: nginx-gateway
 replicaCount: 2
 image:
   repository: nginx
