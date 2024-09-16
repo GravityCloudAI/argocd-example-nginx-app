@@ -3,8 +3,9 @@
 ### Runbook
 
 1. Install & Setup ArgoCD: [Deploying Argo CD in Kubernetes with Helm Chart](https://gravitycloud.ai/blog/deploying-argo-cd-in-kubernetes-with-helm-chart)
+2. Install `Argo Rollout` for a Blue-Green deployment strategy: `kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml`
 
-2. Download the `argo-nginx-app.yaml`. If you want to change the container image, then clone the repo and make the changes in the yaml file also.
+3. Download the `argo-nginx-app.yaml`. If you want to change the container image, then clone the repo and make the changes in the yaml file also.
 ```yaml
 source:
     repoURL: 'https://github.com/code-crusher/test-nginx'
@@ -28,7 +29,10 @@ NAMESPACE              NAME                                                READY
 nginxer                nginx-gateway-deployment-55cc7cd658-4xp8l           1/1     Running     0              17s
 nginxer                nginx-gateway-deployment-55cc7cd658-rsmmw           1/1     Running     0              17s
 ```
-
+**Argo Rollout Watcher**
+```
+kubectl argo rollouts get rollout nginx-gateway-rollout -n nginxer --watch
+```
 > ArgoCD UI
 
 Applications Page
