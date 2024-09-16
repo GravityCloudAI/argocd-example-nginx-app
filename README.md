@@ -32,6 +32,32 @@ nginxer                nginx-gateway-deployment-55cc7cd658-rsmmw           1/1  
 **Argo Rollout Watcher**
 ```
 kubectl argo rollouts get rollout nginx-gateway-rollout -n nginxer --watch
+
+
+Name:            nginx-gateway-rollout
+Namespace:       nginxer
+Status:          ✔ Healthy
+Strategy:        Canary
+  Step:          8/8
+  SetWeight:     100
+  ActualWeight:  100
+Images:          nginx:latest (stable)
+Replicas:
+  Desired:       5
+  Current:       5
+  Updated:       5
+  Ready:         5
+  Available:     5
+
+NAME                                               KIND        STATUS     AGE  INFO
+⟳ nginx-gateway-rollout                            Rollout     ✔ Healthy  19m
+└──# revision:1
+   └──⧉ nginx-gateway-rollout-66cdc56f79           ReplicaSet  ✔ Healthy  19m  stable
+      ├──□ nginx-gateway-rollout-66cdc56f79-5llb2  Pod         ✔ Running  19m  ready:1/1,restarts:1
+      ├──□ nginx-gateway-rollout-66cdc56f79-9sx9r  Pod         ✔ Running  19m  ready:1/1,restarts:1
+      ├──□ nginx-gateway-rollout-66cdc56f79-bzdtt  Pod         ✔ Running  19m  ready:1/1,restarts:1
+      ├──□ nginx-gateway-rollout-66cdc56f79-hk548  Pod         ✔ Running  19m  ready:1/1,restarts:1
+      └──□ nginx-gateway-rollout-66cdc56f79-lmzx8  Pod         ✔ Running  19m  ready:1/1,restarts:1
 ```
 > ArgoCD UI
 
