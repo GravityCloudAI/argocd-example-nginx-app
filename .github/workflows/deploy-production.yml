@@ -1,0 +1,13 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  buildAndDeploy:
+    name: Build and Deploy
+    runs-on: ubuntu-minimal:latest
+    steps:
+      - name: Echo Example Step
+        run: echo "Hello World"

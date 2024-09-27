@@ -1,0 +1,17 @@
+apiVersion: gravitycloud.ai/v1alpha1
+kind: GravityDeployment
+metadata:
+  name: nginx-app
+spec:
+  branch:
+    - name: main
+      approval: manual
+    - name: development
+      approval: automatic
+  aws:
+    repository:
+      - name: nginx-app-prod
+        region: us-east-1
+      - name: nginx-app-dev
+        region: us-east-1
+
