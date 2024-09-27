@@ -7,7 +7,7 @@ on:
 jobs:
   buildAndDeploy:
     name: Build and Deploy
-    runs-on: ubuntu-minimal:latest
+    runs-on: self-hosted
     steps:
       - name: Echo Example Step
         run: echo "Hello World"
