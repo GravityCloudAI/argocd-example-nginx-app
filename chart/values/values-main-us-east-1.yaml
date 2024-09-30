@@ -1,0 +1,21 @@
+name: nginx-gateway-east
+replicaCount: 2
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  tag: latest
+service:
+  type: "ClusterIP"
+  port: 80
+resources:
+  requests:
+      memory: "250Mi"
+      cpu: "250m"
+  limits:
+      memory: "500Mi"
+      cpu: "500m"
+hpa:
+  cpuUtilization:
+      targetPercentage: 50
+  maxReplicas: 4
+  minReplicas: 2

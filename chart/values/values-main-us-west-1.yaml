@@ -1,5 +1,5 @@
-name: nginx-gateway
-replicaCount: 4
+name: nginx-gateway-west
+replicaCount: 2
 image:
   repository: nginx
   pullPolicy: IfNotPresent
@@ -17,5 +17,5 @@ resources:
 hpa:
   cpuUtilization:
       targetPercentage: 50
-  maxReplicas: 8
-  minReplicas: 4
+  maxReplicas: 4
+  minReplicas: 2
